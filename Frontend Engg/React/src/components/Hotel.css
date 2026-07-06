@@ -1,0 +1,124 @@
+/* Hotel.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f7fc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.filter-container {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.filter-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+  font-size: 28px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.filter-group label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 14px 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.2);
+}
+
+.price-row {
+  display: flex;
+  gap: 20px;
+}
+
+.price-row .filter-group {
+  flex: 1;
+}
+
+.filter-group p {
+  color: #e63946;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+#applyFilter {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#applyFilter:hover {
+  background: #3730a3;
+  transform: translateY(-2px);
+}
+
+#applyFilter:active {
+  transform: translateY(0);
+}
+
+#applyFilter:disabled {
+  background: #b0b0b0;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .filter-container {
+    padding: 25px;
+  }
+
+  .price-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .filter-container h2 {
+    font-size: 24px;
+  }
+}
